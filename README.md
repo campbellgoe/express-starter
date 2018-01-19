@@ -60,4 +60,8 @@ There is also `gulp image` which takes all images from the folder ./uncompressed
 
 `npm install --only=production` to not install devDependencies.
 
+<<<<<<< HEAD
 Only provide the dist folder.
+=======
+Only provide the dist folder.
+>>>>>>> b21d6304a8d2ee97835d1625256a01c4d5f6f8de
