@@ -1,0 +1,13 @@
+doctype html
+html
+  head
+    title Website Title
+    link(rel='stylesheet', href='/css/style.css')
+  body
+    - var error = error || {};
+    - var status = error.status || "Error";
+    - var stack = error.stack || "unknown";
+    - var message = message || "-";
+    h1= message
+    h2= status
+    pre #{stack}
