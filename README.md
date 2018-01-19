@@ -36,8 +36,7 @@ cd to express-starter
 
 Note: guetzli image compression is disabled due to build issue. All other image compression is enabled. May need to disable zopflipng too.
 
-`npm test` - This will now show latest state of tests in  ./test/*.js
-
+`npm test` - This will now show latest state of tests in  ./test/\*.js
 
 2. Open a new terminal (or Hyper tab).
 
@@ -61,4 +60,11 @@ There is also `gulp image` which takes all images from the folder ./uncompressed
 `npm install --only=production` to not install devDependencies.
 
 Only provide the dist folder.
+
+There are more than just the above to make production, such as removing all debug logging and so on...
+
+
+#Tips
+
+Use HyperCwd https://github.com/hharnisc/hypercwd to configure the initial directory to open the terminal in.
 

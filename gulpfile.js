@@ -17,15 +17,15 @@ gulp.task('build', build);//builds src into dist
 gulp.task('image', compressImages);//compresses images in the images/uncompressed folder
 //gulp getCompressedImages
 gulp.task('getCompressedImages', getCompressedImages);//moves compressed images to src
-//gulp beginWatch
-gulp.task('watch', watch);//builds src into dist
+//gulp watch
+gulp.task('watch', watch);//builds src into dist on edit of src, and runs linter.
 //gulp lint
 gulp.task('lint', lint);//linter
 
 //move from src to dist and process the files such as compressing, and converting pug to html.
 function build(done) {
   var t0 = Date.now();
-  console.log("Building at ", new Date().toLocaleTimeString().replace("/.*(d{2}:d{2}:d{2}).*/", "$1"));
+  console.log('Building at ', new Date().toLocaleTimeString().replace('/.*(d{2}:d{2}:d{2}).*/', '$1'));
   pump([
         gulp.src('src/bin/*'),//move bin/www
         gulp.dest('dist/bin'),
@@ -54,8 +54,8 @@ function build(done) {
         ],
         function cb(er){
           var t1 = Date.now();
-          console.log("...Built in ", (t1-t0)/1000, "seconds.", er || "");
-        typeof done == "function" ? done() : null;//fire done if it is a function
+          console.log('...Built in ', (t1-t0)/1000, 'seconds.', er || '');
+        typeof done == 'function' ? done() : null;//fire done if it is a function
         return; 
       }
       );
@@ -68,7 +68,7 @@ function watch(){
       lint();
     }
   );
-  console.log("Watching src");
+  console.log('Watching src');
 }
 //after compressing, it's recommended to place it in public/images
 function compressImages(done){
@@ -111,6 +111,6 @@ function lint(done){
 gulp.task('default', defaultTask);
 
 function defaultTask(done) {
-  console.log("\r\nUse gulp command. Where command is one of the following:","\r\nbuild: moves/processes files from src to dist.","\r\nimage: moves/compresses images from images/uncompressed to images/compressed.","\r\ngetCompressedImages: moves all from images/compressed to src/public/images.\r\n","watch: does gulp build when a file in src changes.\r\n","lint: look for possible improvements, and standardization opportunities.\r\n");
+  console.log('\r\nUse gulp command. Where command is one of the following:','\r\nbuild: moves/processes files from src to dist.','\r\nimage: moves/compresses images from images/uncompressed to images/compressed.','\r\ngetCompressedImages: moves all from images/compressed to src/public/images.\r\n','watch: does gulp build when a file in src changes.\r\n','lint: look for possible improvements, and standardization opportunities.\r\n');
   done();
 }
