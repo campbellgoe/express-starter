@@ -37,7 +37,7 @@ You may need to `npm install gulp-cli -g`
 
 `npm start` to start the server on the PORT specified in .env (default: 3000).
 
-#Tips
+# Tips
 
 Use HyperCwd https://github.com/hharnisc/hypercwd to configure the initial directory to open the terminal in.
 
