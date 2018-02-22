@@ -1,5 +1,5 @@
-/* eslint no-console: "warn" */
-
+/*eslint-disable no-console */
+//for some reason the uglify-es plugin is ignoring "@preserve" in comments, throwing a lint error in /dist folder.
 const express = require('express');
 const path = require('path');
 //const favicon = require('serve-favicon');
@@ -39,7 +39,8 @@ app.use(function(err, req, res) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
-  console.log("error:: ", err.message, "and", res.locals.error); // eslint-disable-line no-console
+  
+  console.log("error:: ", err.message, "and", res.locals.error);
   // render the error page
   res.status(err.status || 500);
   res.sendFile(path.join(__dirname, 'views', 'error.html'));

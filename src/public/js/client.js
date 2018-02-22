@@ -1,1 +1,0 @@
-//Write in ES6 and it will transpile to ES5 for browsers!

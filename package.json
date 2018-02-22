@@ -1,34 +1,42 @@
 {
-  "name": "website",
-  "version": "0.0.0",
+  "name": "express-starter",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
     "start": "node ./dist/bin/www",
-    "test": "node ./node_modules/mocha/bin/mocha --watch --reporter \"min\""
+    "test": "node ./node_modules/mocha/bin/mocha --watch",
+    "dev": "gulp build && mkdir \"./dist/public/js/\" && browserify ./temp/js/entry.js -o ./dist/public/js/bundle.js",
+    "build": "gulp reset && gulp build --minify --images && mkdir \"./dist/public/js/\" && browserify ./temp/js/entry.js -o ./dist/public/js/bundle.js",
+    "lint": "gulp lint"
   },
   "dependencies": {
-    "body-parser": "~1.18.2",
-    "cookie-parser": "~1.4.3",
-    "debug": "~2.6.9",
-    "express": "~4.15.5",
-    "morgan": "~1.9.0",
-    "pug": "2.0.0-beta11",
-    "serve-favicon": "~2.4.5"
+    "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.3",
+    "debug": "^2.6.9",
+    "express": "^4.16.2",
+    "morgan": "^1.9.0",
+    "pug": "^2.0.0-rc.4",
+    "serve-favicon": "^2.4.5"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "dotenv": "^4.0.0",
     "gulp": "^3.9.1",
-    "gulp-babel": "^7.0.0",
+    "gulp-babel": "^7.0.1",
+    "gulp-browserify": "^0.5.1",
     "gulp-clean-css": "^3.9.2",
+    "gulp-cli": "^2.0.1",
     "gulp-concat": "^2.6.1",
-    "gulp-eslint": "^4.0.1",
+    "gulp-debug": "^3.2.0",
+    "gulp-eslint": "^4.0.2",
     "gulp-htmlmin": "^4.0.0",
+    "gulp-if": "^2.0.2",
     "gulp-image": "^4.2.0",
     "gulp-pug": "^3.3.0",
     "gulp-uglify-es": "^1.0.0",
     "mocha": "^5.0.0",
-    "pump": "^2.0.0"
+    "pump": "^2.0.1",
+    "rimraf": "^2.6.2"
   }
 }
