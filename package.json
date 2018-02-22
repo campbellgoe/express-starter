@@ -5,8 +5,8 @@
   "scripts": {
     "start": "node ./dist/bin/www",
     "test": "node ./node_modules/mocha/bin/mocha --watch",
-    "dev": "gulp build && mkdir \"./dist/public/js/\" && browserify ./temp/js/entry.js -o ./dist/public/js/bundle.js",
-    "build": "gulp reset && gulp build --minify --images && mkdir \"./dist/public/js/\" && browserify ./temp/js/entry.js -o ./dist/public/js/bundle.js",
+    "dev": "gulp build && mkdir \"./dist/public/js/\" -p && browserify ./temp/js/entry.js -o ./dist/public/js/bundle.js",
+    "build": "gulp reset && gulp build --minify --images && mkdir \"./dist/public/js/\" -p && browserify ./temp/js/entry.js -o ./dist/public/js/bundle.js",
     "lint": "gulp lint"
   },
   "dependencies": {
