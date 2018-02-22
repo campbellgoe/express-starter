@@ -41,3 +41,5 @@ You may need to `npm install gulp-cli -g`
 
 Use HyperCwd https://github.com/hharnisc/hypercwd to configure the initial directory to open the terminal in.
 
+
+mkdir -p will not work as expected on windows (obviously), so figure the windows version out and add that into package.json build/dev scripts (or check if folder does not exist before running that command).
