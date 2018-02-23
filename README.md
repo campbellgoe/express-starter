@@ -4,15 +4,6 @@ This is a blueprint I am using to begin projects such as web sites or apps.
 
 It is using Express, Gulp, Pug, ESLint, Mocha, ES6+Babel etc.
 
-# Notice
-
-If you are on windows, replace these two package.json (npm) scripts with this:
-
-`"dev": "gulp build && if not exist \"./dist/public/js/\" mkdir \"./dist/public/js/\" && browserify ./temp/js/entry.js -o ./dist/public/js/bundle.js"`
-and
-`"build": "gulp reset && gulp build --minify --images && if not exist \"./dist/public/js/\" mkdir \"./dist/public/js/\" && browserify ./temp/js/entry.js -o ./dist/public/js/bundle.js"`
-as mkdir -p is not understood.
-
 # Getting started for development:
 
 1. Open a terminal (e.g. Hyper (Ctrl+shift+c to copy, right click to paste)).
