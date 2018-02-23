@@ -43,3 +43,4 @@ You may need to `npm install gulp-cli -g`
 
 Use HyperCwd https://github.com/hharnisc/hypercwd to configure the initial directory to open the terminal in.
 
+In addition to checking for vulnerabilities via snyk.io - use the nodesecurity.io vulnerability database too; `npm install nsp -g` and `nsp check`.

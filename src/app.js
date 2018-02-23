@@ -13,6 +13,8 @@ const index = require('./routes/index');
 const app = express();
 const helmet = require('helmet');
 
+require('dotenv').config();
+
 //setting secure http headers with helmet
 app.use(helmet());
 
@@ -31,23 +33,19 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index);
 //app.use('/users', users);
 
-// catch 404 and forward to error handler
+// catch 404 or other errors
 app.use(function(req, res, next) {
   let err = new Error('Not Found');
   err.status = 404;
-  next(err);
-});
-
-// error handler (err, req, res, next)
-app.use(function(err, req, res) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
-  
-  console.log("error:: ", err.message, "and", res.locals.error);
-  // render the error page
-  res.status(err.status || 500);
-  res.sendFile(path.join(__dirname, 'views', 'error.html'));
-});
 
+  if (res.headersSent) {
+    //console.log("headers already sent");
+    return next(err)
+  } else {
+     res.status(err.status || 500).render(path.join(__dirname, 'views', 'error'), err);
+  }
+});
 module.exports = app;
