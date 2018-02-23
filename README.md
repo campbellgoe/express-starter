@@ -40,3 +40,5 @@ You may need to `npm install gulp-cli -g`
 # Tips
 
 Use HyperCwd https://github.com/hharnisc/hypercwd to configure the initial directory to open the terminal in.
+
+[![Known Vulnerabilities](https://snyk.io/test/github/gcdeveloper/express-starter/badge.svg?targetFile=package.json)](https://snyk.io/test/github/gcdeveloper/express-starter?targetFile=package.json)
