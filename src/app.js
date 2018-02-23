@@ -11,6 +11,10 @@ const index = require('./routes/index');
 //const users = require('./routes/users');
 
 const app = express();
+const helmet = require('helmet');
+
+//setting secure http headers with helmet
+app.use(helmet());
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

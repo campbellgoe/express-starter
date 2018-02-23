@@ -3,3 +3,7 @@
 
 # Dependency directories
 node_modules/
+
+#build directories
+temp/
+dist/
