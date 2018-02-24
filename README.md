@@ -51,4 +51,4 @@ Add a rate limiter to express.
 
 Add auto-prefixer for css in build process
 
-Add brackets around command line if statement, so it continues the rest of the commands.
+Add watch module to enable recompiling of code on save
