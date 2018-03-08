@@ -1,0 +1,9 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.10.2
+# ignores vulnerabilities until expiry date; change duration by modifying expiry date
+ignore:
+  'npm:clean-css:20180306':
+    - pug > pug-filters > clean-css:
+        reason: None given
+        expires: '2018-04-07T19:51:44.347Z'
+patch: {}
