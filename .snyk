@@ -1,9 +1,17 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
-version: v1.10.2
+version: v1.14.1
 # ignores vulnerabilities until expiry date; change duration by modifying expiry date
 ignore:
   'npm:clean-css:20180306':
     - pug > pug-filters > clean-css:
         reason: None given
         expires: '2018-04-07T19:51:44.347Z'
-patch: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  SNYK-JS-LODASH-567746:
+    - pug > pug-code-gen > constantinople > babel-types > lodash:
+        patched: '2020-05-01T07:43:04.428Z'
+    - pug > pug-filters > constantinople > babel-types > lodash:
+        patched: '2020-05-01T07:43:04.428Z'
+    - pug > pug-code-gen > pug-attrs > constantinople > babel-types > lodash:
+        patched: '2020-05-01T07:43:04.428Z'
