@@ -23,7 +23,7 @@
     "babel-core": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "dotenv": "^4.0.0",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-babel": "^7.0.1",
     "gulp-browserify": "^0.5.1",
     "gulp-clean-css": "^3.9.2",
